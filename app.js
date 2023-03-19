@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 
 import pageRoute from "./routes/pageRoute.js";
 import aboutRoute from "./routes/aboutRoute.js";
+import blogRoute from "./routes/blogRoute.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 
 app.use("/", pageRoute)
 app.use("/about", aboutRoute)
+app.use("/blog", blogRoute)
 
 // app.get("/", (req, res) => {
 //     res.render("index");
